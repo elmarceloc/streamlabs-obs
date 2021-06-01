@@ -538,7 +538,7 @@ app.on('second-instance', (event, argv, cwd) => {
 let protocolLinkReady = false;
 let pendingLink;
 
-// For mac os, this event will fire when a protocol link is triggered
+// For Mac OS, this event will fire when a protocol link is triggered.
 app.on('open-url', (e, url) => {
   if (protocolLinkReady) {
     workerWindow.send('protocolLink', url);
